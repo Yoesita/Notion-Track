@@ -2,15 +2,32 @@
 
 > Propuesta de solución al desafio API Notion.
 
+## Integrantes
+
+- Felipe Marcial
+- Juan Pablo Cielo
+- Miguel Hernández
+- Hozai Marquez
+- Yos
+
 ## Descripción
 
-Se propone desarrollar un sistema que, a partir de un video/audio de una conferencia (Webinar o Presencial) transcriba su contenido y lo resuma en sus puntos clave para posteriormente utilizar la API de Notion y para enviar los punto clave a un workspace colaborativo.
+Se propone desarrollar un sistema que, a partir de un video/audio de una conferencia (Webinar o Presencial) transcriba su contenido a Notion.
+
+## Objetivos
+
+Resumir lo sus puntos clave de cualquier conferencia y enviar la información (utilizando la API de Notion) a un workspace colaborativo para su posterior analisis/evaluación.
 
 ## Funcionalidades
 
 - Automatizar la tarea de tomar notas durante una conferencia (online/presencial).
 - Resumir el contenido de la conferencia en sus puntos clave para un posterior análisis.
 - Colaborar eficientemente en grupos de trabajo (desde programadores hasta creadores de contenido) que requieran las ideas clave de una conferencia.
+
+## Tecnologias
+
+- Python
+- Flask
 
 ## Integraciones
 
