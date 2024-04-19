@@ -2,3 +2,5 @@
 venv/
 __pycache__/
 video/
+*.txt
+*.mp3
