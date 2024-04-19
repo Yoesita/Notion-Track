@@ -43,12 +43,19 @@ def CreateBlock(client, PAGE_ID):
     )
     print(new_block)
 
+def getDB(client, PAGE_ID):
+    newDatabase = client.databases.retrieve(database_id=PAGE_ID)
+    for p in newDatabase['properties']:
+        print(p)
+
+
 def main():
     TOKEN   = os.environ.get('Notion_Key')
     PAGE_ID = os.environ.get('Notion_Page')
     
     notion = Client(auth=TOKEN)
-    CreateBlock(notion, PAGE_ID)
+    # CreateBlock(notion, PAGE_ID)
+    getDB(notion, "fc67a4b88ab0491abc18d414c9508618")
 
 if __name__ == '__main__':
     main()

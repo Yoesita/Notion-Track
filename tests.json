@@ -4,8 +4,7 @@
             {
                 "type": "text",
                 "text": {
-                    "content": "awas",
-                    "link": null
+                    "content": "awas"
                 },
                 "annotations": {
                     "bold": false,
@@ -15,16 +14,19 @@
                     "code": false,
                     "color": "default"
                 },
-                "plain_text": "awas",
-                "href": null
+                "plain_text": "awas"
             }
         ]
     },
     "Tags": {
-        "multi_select": "Mobile"
+        "multi_select": [
+            {
+                "name": "Mobile"
+            }
+        ]
     },
     "Assignee": {
-        "multi_select": [
+        "people": [
             {
                 "object": "user",
                 "id": "d78eaa51-6d96-4a88-bd8d-2a28d5b8649d"
@@ -32,16 +34,18 @@
         ]
     },
     "Status": {
-        "status": "Not started"
+        "status": {
+            "name": "Not started"
+        }
     },
     "Due": {
         "date": {
-            "start": "2025-03-03",
-            "end": null,
-            "time_zone": null
+            "start": "2025-03-03"
         }
     },
     "Priority": {
-        "select": "Low"
+        "select": {
+            "name": "Low"
+        }
     }
 }

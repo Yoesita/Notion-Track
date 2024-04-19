@@ -3,7 +3,7 @@ import unicodedata
 
 class SDK_Handler:
     def __init__(self, TOKEN):
-        self.notion   = Client(auth=TOKEN).pages.create
+        self.notion   = Client(auth=TOKEN)
         self.API_NAME = self.notion.users.me()['name']
         self.properties_exceptions = [
             'created_by',
@@ -42,8 +42,6 @@ class SDK_Handler:
                 case 'date':
                     properties[p] = {type_ : {
                         "start": "2021-08-13T00:00:00Z",
-                        "end": None,
-                        "time_zone": None
                     }}
                     continue
 
@@ -53,7 +51,6 @@ class SDK_Handler:
                             "type": "text",
                             "text": {
                                 "content": "This is a title",
-                                "link": None
                             },
                             "annotations": {
                                 "bold": False,
@@ -64,7 +61,6 @@ class SDK_Handler:
                                 "color": "default"
                             },
                             "plain_text": "This is a title",
-                            "href": None
                         }
                     ]}
                     continue
@@ -82,7 +78,8 @@ class SDK_Handler:
     
     def postPage(self, DATABASE_ID, properties):
         new_page = self.notion.pages.create(
-            parent={"database_id": DATABASE_ID},
+            parent={"type":"database_id",
+                    "database_id": DATABASE_ID},
             properties=properties
         )
         return new_page
@@ -101,8 +98,6 @@ if __name__ == '__main__':
 
     page_properties = dict()
     for property_, format_ in db_properties.items():
-        print(f"Property: {property_}:")
-        pprint(f"Format: {format_}")
 
         if 'title' in format_.keys():
             page_properties[property_] = format_
@@ -122,10 +117,20 @@ if __name__ == '__main__':
             for i, person in enumerate(format_['people']):
                 print(f"Person {i}: {person['name']}")
             choice = int(input("Choose a person: "))
-            page_properties[property_] = {type_: [{
+            page_properties[property_] = {'people': [{
                 "object": "user",
                 "id": format_['people'][choice]['id']
             }]}
+            continue
+        
+        if 'multi_select' in format_.keys():
+            print("Multi Select:")
+            for i, option in enumerate(format_['multi_select']):
+                print(f"Option {i}: {option['name']}")
+            choice = int(input("Choose an option: "))
+            page_properties[property_] = {'multi_select': [
+                {"name": format_['multi_select'][choice]['name']}
+            ]}
             continue
 
         for type_, content in format_.items():
@@ -135,11 +140,11 @@ if __name__ == '__main__':
                 pprint(option)
             
         choice = int(input("Choose an option: "))
-        page_properties[property_] = {type_: content[choice]['name']}
+        page_properties[property_] = {type_: 
+            {"name": content[choice]['name']}}
 
     # pprint(page_properties)
-    # p_json = json.dumps(page_properties)
-    # with open('tests.json', 'w') as f:
-    #     json.dump(page_properties, f, indent=4)
+    with open('tests.json', 'w') as f:
+        json.dump(page_properties, f, indent=4)
     new_page = sdk.postPage(TASKS_DB_ID, page_properties)
-    pprint(new_page)
+    # pprint(new_page)
