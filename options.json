@@ -1,0 +1,121 @@
+{
+    "Task name": {
+        "title": {}
+    },
+    "Tags": {
+        "multi_select": [
+            {
+                "id": "Mobile",
+                "name": "Mobile",
+                "color": "purple",
+                "description": null
+            },
+            {
+                "id": "Website",
+                "name": "Website",
+                "color": "blue",
+                "description": null
+            },
+            {
+                "id": "Improvement",
+                "name": "Improvement",
+                "color": "pink",
+                "description": null
+            }
+        ]
+    },
+    "Assignee": {
+        "people": [
+            {
+                "object": "user",
+                "id": "d78eaa51-6d96-4a88-bd8d-2a28d5b8649d",
+                "name": "Felipe Marcial",
+                "avatar_url": "https://lh3.googleusercontent.com/a-/AOh14GgbOZwMsjIyawxeUuQ5dB-ORoYxSwX-GZ4TQQUflw=s100",
+                "type": "person",
+                "person": {
+                    "email": "felipemarcialasd@gmail.com"
+                }
+            },
+            {
+                "object": "user",
+                "id": "4e3a439d-dcf3-4e0c-936a-78bc43976dd5",
+                "name": "cielo 882",
+                "avatar_url": "https://lh3.googleusercontent.com/a/AEdFTp5UBc7jtAymbKBLgMowTAYP6lzfPzAQRqU0HKsY=s100",
+                "type": "person",
+                "person": {
+                    "email": "cielo882@gmail.com"
+                }
+            },
+            {
+                "object": "user",
+                "id": "328c5e27-8d6a-474a-bfc1-321a947c79aa",
+                "name": "Miguel Hernandez",
+                "avatar_url": "https://lh3.googleusercontent.com/a/AATXAJxDz2yZ6g7TukfdwMTapGCF6oV1KMgcZXYB-1Mz=s100",
+                "type": "person",
+                "person": {
+                    "email": "elamargadom1@gmail.com"
+                }
+            }
+        ]
+    },
+    "Status": {
+        "status": [
+            {
+                "id": "not-started",
+                "name": "Not started",
+                "color": "default",
+                "description": null
+            },
+            {
+                "id": "in-progress",
+                "name": "In progress",
+                "color": "blue",
+                "description": null
+            },
+            {
+                "id": "done",
+                "name": "Done",
+                "color": "green",
+                "description": null
+            },
+            {
+                "id": "archived",
+                "name": "Archived",
+                "color": "gray",
+                "description": null
+            }
+        ]
+    },
+    "Due": {
+        "date": {
+            "start": "2021-08-13T00:00:00Z",
+            "end": "null",
+            "time_zone": "null"
+        }
+    },
+    "Priority": {
+        "select": [
+            {
+                "id": "priority_low",
+                "name": "Low",
+                "color": "green",
+                "description": null
+            },
+            {
+                "id": "priority_medium",
+                "name": "Medium",
+                "color": "yellow",
+                "description": null
+            },
+            {
+                "id": "priority_high",
+                "name": "High",
+                "color": "red",
+                "description": null
+            }
+        ]
+    },
+    "Summary": {
+        "rich_text": {}
+    }
+}

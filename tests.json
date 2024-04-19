@@ -1,0 +1,47 @@
+{
+    "Task name": {
+        "title": [
+            {
+                "type": "text",
+                "text": {
+                    "content": "awas",
+                    "link": null
+                },
+                "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                },
+                "plain_text": "awas",
+                "href": null
+            }
+        ]
+    },
+    "Tags": {
+        "multi_select": "Mobile"
+    },
+    "Assignee": {
+        "multi_select": [
+            {
+                "object": "user",
+                "id": "d78eaa51-6d96-4a88-bd8d-2a28d5b8649d"
+            }
+        ]
+    },
+    "Status": {
+        "status": "Not started"
+    },
+    "Due": {
+        "date": {
+            "start": "2025-03-03",
+            "end": null,
+            "time_zone": null
+        }
+    },
+    "Priority": {
+        "select": "Low"
+    }
+}
