@@ -8,8 +8,7 @@
 - Juan Pablo Cielo
 - Miguel Hernández
 - Hozai Marquez
-- Yos
-
+- Keisi Pérez
 ## Descripción
 
 Se propone desarrollar un sistema que, a partir de un video/audio de una conferencia (Webinar o Presencial) transcriba su contenido a Notion.
